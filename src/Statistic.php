@@ -121,7 +121,7 @@ class Statistic
             static::setTransfer(json_encode([
                 'time'     => date('Y-m-d H:i:s.', (int)$time) . substr($time, 11),
                 'project'  => config('plugin.gitfei1231.statistic.app.project') . "-Exception",
-                'ip'       => '127.0.0.1',
+                'ip'       => '\request()->getRealIp()',
                 'transfer' => $transfer,
                 'costTime' => 0,
                 'success'  => 0,
@@ -176,7 +176,7 @@ class Statistic
             static::setTransfer(json_encode([
                 'time'     => date('Y-m-d H:i:s.', (int)$time) . substr($time, 11),
                 'project'  => config('plugin.gitfei1231.statistic.app.project') . "-SQL",
-                'ip'       => '127.0.0.1',
+                'ip'       => '\request()->getRealIp()',
                 'transfer' => $transfer,
                 'costTime' => $runtime / 1000,
                 'success'  => 1,
@@ -218,7 +218,7 @@ class Statistic
             static::setTransfer(json_encode([
                 'time'     => date('Y-m-d H:i:s.', (int)$time) . substr($time, 11),
                 'project'  => config('plugin.gitfei1231.statistic.app.project') . "-Redis",
-                'ip'       => '127.0.0.1',
+                'ip'       => '\request()->getRealIp()',
                 'transfer' => Bootstrap::$process . ' ' . "Redis::{$command}",
                 'costTime' => $runtime / 1000,
                 'success'  => 1,
