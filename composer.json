@@ -1,0 +1,18 @@
+{
+	"name": "gitfei1231/webman-statistic",
+	"type": "library",
+	"keywords": [
+		"webman"
+	],
+	"license": "MIT",
+	"description": "webman-statistic 应用监控插件",
+	"require": {
+		"workerman/http-client": "^1.0",
+		"phpmyadmin/sql-parser": "^5.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"Hsk99\\WebmanStatistic\\": "src"
+		}
+	}
+}
