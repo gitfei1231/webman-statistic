@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"description": "webman-statistic 应用监控插件",
 	"require": {
-		"workerman/http-client": "^1.0",
+		"workerman/http-client": ">=1.0",
 		"phpmyadmin/sql-parser": "^5.5"
 	},
 	"autoload": {
