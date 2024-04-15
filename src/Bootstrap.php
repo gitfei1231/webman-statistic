@@ -85,12 +85,7 @@ class Bootstrap implements \Webman\Bootstrap
                 if ($sql === 'select 1' || !is_numeric($runtime)) {
                     return;
                 }
-
-                // 兼容 webman/log 插件记录Sql日志
-                // if (class_exists(\Webman\Log\Middleware::class) && config('plugin.webman.log.app.enable', false)) {
-                //     ThinkDb::log($sql . " [$master RunTime: " . $runtime * 1000 . " ms]");
-                // }
-                
+                                
                 Statistic::sql(trim($sql), $runtime * 1000, ['master' => $master]);
             });
         }
